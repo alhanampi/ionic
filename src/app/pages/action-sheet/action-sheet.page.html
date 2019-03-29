@@ -1,0 +1,20 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="danger" text="volver"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>action-sheet</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<app-header titulo="action"></app-header>
+
+<ion-content padding> 
+
+  <h2> action sheet</h2>
+<!--llama a la función con evento click-->
+ <ion-button color="primary" expand="full" (click)="presentActionSheet()">
+   <ion-label>Mostrar botones</ion-label>
+ </ion-button>
+</ion-content>

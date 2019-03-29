@@ -1,0 +1,26 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="volver" defaultHref="/" color="secondary">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>alert</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<app-header [titulo]="titulo || 'alert page'"></app-header> 
+<!--va a pasar ese nombre al header. Si no hay título, muestra el alert page.-->
+
+<ion-content padding>
+<!-- <h1>Alert Page</h1> -->
+
+<ion-button (click)="presentAlert()" expand="full" color="secondary">
+  Mostrar alerta
+</ion-button>
+
+<!-- le paso por acá la funcion para cambiar nombre. -->
+<ion-button (click)="changeName()" expand="full" color="secondary">
+  Cambiar nombre
+</ion-button>
+
+</ion-content>

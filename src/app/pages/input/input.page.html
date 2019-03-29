@@ -1,0 +1,68 @@
+<app-header titulo="input"></app-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Nombre: {{nombre || 'no hay nombre'}}</ion-label> <!--carga la información que se ponga en el input. Para que no esté vacía es que se pone el ||. Va capturando a medida que se escribe, no se necesita apretar enter-->
+    </ion-list-header>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label> <!--con floating, cuando se hace click en el input la palabra se achica y va arriba-->
+      <ion-input 
+      type="text"
+      [(ngModel)]="nombre" 
+      ></ion-input> <!--ngModel para capturar el valor del input. No es necesario importar el formsModule-->
+
+    </ion-item>
+
+  </ion-list>
+
+  <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate()"> 
+    <!--al ser ngForm tiene todas las propiedades de un form: si es válido, ha sido modificado, etc. CON el ngSubmit, se dispara esa función al hacer submit-->
+
+    <ion-list>
+
+      <ion-list-header>
+        <ion-label>Formulario Template: válido {{formulario.valid}}</ion-label>
+        <!--si no cumple las condiciones, no es válido. Cambia cuando las condiciones se cumplen-->
+      </ion-list-header>
+      <ion-item>
+          <ion-label position="floating">email</ion-label>
+          <ion-input 
+            type="email" 
+            name="email" 
+            pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+            [(ngModel)]="usuario.email" 
+            required>
+          </ion-input>
+          <!--el pattern es para hacer que compruebe que es un email-->
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="floating">password</ion-label>
+          <ion-input 
+            type="password" 
+            name="password" 
+            minlength = 8
+            [(ngModel)]="usuario.password"
+            required
+            >
+          </ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-button 
+      expand=full 
+      type=submit 
+      color="tertiary"
+      [disabled]="formulario.invalid"
+      > <!--está deshabilitado si el formulario es inválido-->
+      submit
+    </ion-button>
+
+
+  </form>
+
+</ion-content>

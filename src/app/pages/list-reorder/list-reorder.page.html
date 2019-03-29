@@ -1,0 +1,30 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>List Reorder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-reorder-group [disabled]="false" (ionItemReorder)="reorder ($event)"> <!--entre [] porque se lo va a manejar como variable. Si lo dejara solo con el disabled, crashea. Hay que llamar un evento cuando se suelta. Para eso se crea el (ionItemReorder) y se lo hace emitir un event-->
+
+
+
+      <ion-item *ngFor="let personaje of personajes">
+        <ion-label>{{personaje}}</ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+    
+  </ion-list>
+
+  <ion-button (click)="onClick()" expand="full">
+    Guardar
+  </ion-button>
+
+</ion-content>

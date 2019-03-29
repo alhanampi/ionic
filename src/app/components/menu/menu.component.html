@@ -1,0 +1,29 @@
+
+  <ion-menu 
+    menuId="menuUno" 
+    side="start" 
+    type="overlay" 
+    contentId="principal"
+  > 
+  <!--contentId es el ion-router-outlet ppal. Sin eso no puede escuchar y hacer drag-->
+  <ion-header>
+    <ion-toolbar color="warning">
+      <ion-title>Menú principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+
+      <ion-menu-toggle *ngFor="let c of componentes | async"> <!--el toggle sirve para que al abrir un componente se cierre autmáticamente el menu-->
+
+        <ion-item [routerLink]="c.redirectTo" >
+          <!-- for para recorrer los componntes del menu, sin async tiraría error. Si da error en routerLink, importar en components.module el routerModule -->
+          <ion-icon slot="start" [name]="c.icon" color="warning"></ion-icon>
+          <ion-label> {{c.name}} </ion-label>
+          
+        </ion-item>
+        
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>

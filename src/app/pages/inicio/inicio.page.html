@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+<!-- para poner el icono de menu -->
+    <ion-buttons slot="start">
+      <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <!-- otra opcion, más corta, es simplemente hacer <ion-menu-button menu="menuUno"> -->
+
+    <ion-title>componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list> <!--ngFor para recorrer y generar elementos de la lista dinamicamente-->
+    <ion-item *ngFor="let c of componentes | async" [routerLink]="c.redirectTo" detail>
+      <ion-icon slot="start" name="{{c.icon}}"></ion-icon>
+      <ion-label>{{c.name}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+<!--   
+  <ion-button [routerLink]="['/alert']">Alert</ion-button>  
+  <ion-button [routerLink]="['/action-sheet']"> action-sheet</ion-button> -->
+  
+</ion-content>

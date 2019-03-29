@@ -1,0 +1,36 @@
+<app-header titulo="grid row"></app-header>
+
+<ion-content padding fullscreen>
+
+  <ion-grid>
+
+    <ion-row>
+      <!-- crea 12 columnas y coloca un elemento en cada una. Si los elementos son más largos, lo que hace es bajarlos cuando superan el espacio máximo, buscando de todos modos hacer que midan lo mismo -->
+      <ion-col *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1]; let i = index">
+        {{i + 1}}
+      </ion-col>
+     
+    </ion-row>
+
+    <ion-row>
+        <!-- crea 12 columnas y coloca un elemento en cada una. Si los elementos son más largos, lo que hace es bajarlos cuando superan el espacio máximo, buscando de todos modos hacer que midan lo mismo -->
+        <ion-col 
+          *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1]; let i = index"
+          size-lg="3" size-md="4" size-sm="6"
+          > 
+          <!--con size se puede poner cantidad de columnas de acuerdo a tamaño de pantalla del dispositivo-->
+          <ion-card>
+            <ion-img src="../../../assets/shapes.svg"></ion-img>
+            <ion-card-header>
+              <ion-card-subtitle> Subtitle</ion-card-subtitle>
+              <ion-card-title>Title</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius quae voluptate aspernatur quas maiores impedit fugiat, nihil adipisci ullam minus nemo a dolore? Alias ea animi totam, esse magni voluptatibus?</ion-card-content>
+            </ion-card>
+          </ion-col>
+       
+      </ion-row>
+
+  </ion-grid>
+
+</ion-content>
