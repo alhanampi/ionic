@@ -1,0 +1,114 @@
+[
+	{
+		"icon": "build",
+		"name": "Action Sheet",
+		"redirectTo": "/action-sheet"
+	},
+	{
+		"icon": "appstore",
+		"name": "Alert",
+		"redirectTo": "/alert"
+	},
+	{
+		"icon": "beaker",
+		"name": "avatar",
+		"redirectTo": "/avatar"
+	},
+	{
+		"icon": "construct",
+		"name": "buttons y router",
+		"redirectTo": "/buttons"
+	},
+	{
+		"icon": "card",
+		"name": "card",
+		"redirectTo": "/card"
+	},
+	{
+		"icon": "checkbox",
+		"name": "checkbox",
+		"redirectTo": "/checkbox"
+	},
+	{
+		"icon": "time",
+		"name": "datetime",
+		"redirectTo": "/datetime"
+	},
+	{
+		"icon": "eye",
+		"name": "fab",
+		"redirectTo": "/fab"
+	},
+	{
+		"icon": "grid",
+		"name": "grid - row",
+		"redirectTo": "/grid"
+	},
+	{
+		"icon": "infinite",
+		"name": "infinite-scroll",
+		"redirectTo": "/infinite-scroll"
+	},
+	{
+		"icon": "browsers",
+		"name": "input",
+		"redirectTo": "/input"
+	},
+	{
+		"icon": "list",
+		"name": "list - slide",
+		"redirectTo": "/list"
+	},
+	{
+		"icon": "swap",
+		"name": "list reoder",
+		"redirectTo": "/list-reorder"
+	},
+	{
+		"icon": "timer",
+		"name": "loading",
+		"redirectTo": "/loading"
+	},
+	{
+		"icon": "phone-portrait",
+		"name": "modal",
+		"redirectTo": "/modal"
+	},
+	{
+		"icon": "chatboxes",
+		"name": "pop over",
+		"redirectTo": "/popover"
+	},
+	{
+		"icon": "code-working",
+		"name": "Progress Bar y range",
+		"redirectTo": "/progressbar"
+	},
+	{
+		"icon": "arrow-up",
+		"name": "refresher",
+		"redirectTo": "/refresher"
+	},
+	{
+		"icon": "search",
+		"name": "searchbar",
+		"redirectTo": "/searchbar"
+	},
+	{
+		"icon": "funnel",
+		"name": "segment",
+		"redirectTo": "/segment"
+	},
+	{
+		"icon": "albums",
+		"name": "Slides",
+		"redirectTo": "/slides"
+	},
+	{
+		"icon": "browsers",
+		"name": "tabs",
+		"redirectTo": "/tabs/account" 
+		}
+
+
+]

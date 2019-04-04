@@ -1,0 +1,39 @@
+<ion-app>
+
+  <!-- <app-menu></app-menu> -->
+
+<!-- con split-pane hago que en horizontal en pantallas grandes muestre mas contenido. Un preview en este caso -->
+  <ion-split-pane contentId="principal" when="md"> <!-- el when hace que suceda de acuerdo al tamaño de la pantalla-->
+  
+  <ion-menu 
+  menuId="menuUno" 
+  side="start" 
+  type="overlay" 
+  contentId="principal"
+> 
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Menú principal</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+
+    <!-- en pantallas grandes, mostrar menu a la izquierda siempre -->
+    <ion-menu-toggle autoHide="false" *ngFor="let c of componentes | async"> 
+      <ion-item [routerLink]="c.redirectTo" >
+        <ion-icon slot="start" [name]="c.icon" color="warning"></ion-icon>
+        <ion-label> {{c.name}} </ion-label>
+        
+      </ion-item>
+      
+    </ion-menu-toggle>
+  </ion-list>
+</ion-content>
+</ion-menu>
+     
+
+    <ion-router-outlet id="principal"></ion-router-outlet>
+      </ion-split-pane>
+
+</ion-app>

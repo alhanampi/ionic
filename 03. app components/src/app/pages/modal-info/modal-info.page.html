@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-capitalize>{{nombre}} - {{pais}}</ion-title> <!--son los datos que está mandando desde modal-info-page-->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button color="primary" expand="full" (click)="salirSinArg()">
+    Salir sin argumentos
+  </ion-button>
+
+  <ion-button color="secondary" expand="full" (click)="salirConArg()">
+      Salir con argumentos
+    </ion-button>
+
+</ion-content>

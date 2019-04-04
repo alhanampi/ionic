@@ -1,0 +1,19 @@
+<app-header titulo="refresher"></app-header>
+
+<ion-content>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <!-- doRefresh es la funcion que se ejecuta cuando se hace drag para abajo -->
+    <ion-refresher-content></ion-refresher-content>
+
+  </ion-refresher>
+
+  <h1 *ngIf="items.length === 0" class="animated fadeIn fast">Refrescar</h1>
+<!-- si es igual a 0 aparece el cartel, si es mayor aparece la lista -->
+  <ion-list *ngIf="items.length > 0" class="animated fadeIn fast"> <!--esas clases vienen del animate. El estilo está importado al global.css-->
+    <ion-item *ngFor="let item of items; let i = index">
+        item {{i + 1 }}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

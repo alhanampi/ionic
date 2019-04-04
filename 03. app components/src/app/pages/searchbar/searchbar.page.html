@@ -1,0 +1,29 @@
+<ion-header no-border>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Searchbar</ion-title>
+  </ion-toolbar>
+  <ion-searchbar 
+    animated 
+    placeholder="filtrar"
+    (ionChange)="buscar( $event)"
+    >
+    <!-- animated es lo que hace en IOS que se mueva cuando se va a buscar -->
+  </ion-searchbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let album of albumes | filtro: textoBuscar: 'title'"> <!--paso title porque estoy usando columna en el pipe, entonces tengo que especificar dónde busco-->
+      <!-- este filtro es el que viene desde pipes -->
+      {{album.title}}
+
+      
+    </ion-item>
+  </ion-list>
+
+</ion-content>

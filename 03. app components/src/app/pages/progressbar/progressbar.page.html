@@ -1,0 +1,26 @@
+<app-header titulo="progress bar y range"></app-header>
+
+<ion-content padding>
+  <ion-progress-bar [value]="porcentaje">
+    <!--con esto asocio una variable. Tengo que crear ese valor en el componente, en export-->
+
+</ion-progress-bar>
+
+
+    <ion-list>
+      <ion-item>
+        <ion-range 
+        (ionChange)="cambioRango( $event )"
+        min="1"
+        max="100"
+        pin="true"
+        color="success"
+        >
+          <!-- ionChange se dispara cada vez que se cambia algo en el rango. Min y max son los valores entre los que se va a mover. Pin=true es la burbuja -->
+          <ion-label slot="start">0</ion-label>
+          <ion-label slot="end">100</ion-label>
+        </ion-range>
+      </ion-item>
+    
+  </ion-list>
+</ion-content>
